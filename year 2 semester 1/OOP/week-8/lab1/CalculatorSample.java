@@ -1,10 +1,8 @@
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
 public class CalculatorSample implements ActionListener {
-
     private final JFrame frame;
     private final JPanel panel;
     private final JTextField textField;
