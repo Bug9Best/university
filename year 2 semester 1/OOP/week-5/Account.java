@@ -10,7 +10,7 @@ public class Account {
     }
 
     public void deposit(double a) {
-        if (getBalance() > 0) {
+        if (a > 0) {
             System.out.println(a + " baht is deposited to " + this.name + ".");
             this.setBalance(getBalance() + a);
         } else {
@@ -19,15 +19,15 @@ public class Account {
     }
 
     public void withdraw(double a) {
-        if (getBalance() > 0) {
-            System.out.println(a + " baht is withdrawn to " + this.name + ".");
-            this.setBalance(getBalance() - a);
-        } else {
-            if (a < 0) {
-                System.out.println("Input number must be a positive integer.");
-            } else if (getBalance() - a < 0) {
+        if (a > 0) {
+            if(getBalance() - a > 0){
+                this.setBalance(getBalance() - a);
+                System.out.println(a + " baht is withdrawn to " + this.name + ".");
+            }else{
                 System.out.println("Not enough money!");
             }
+        } else {
+                System.out.println("Input number must be a positive integer.");
         }
     }
 
