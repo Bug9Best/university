@@ -1,1 +1,1 @@
-# All code abount IT KMITL
+# All code about IT KMITL
