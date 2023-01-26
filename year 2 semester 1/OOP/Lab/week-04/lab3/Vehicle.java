@@ -1,4 +1,3 @@
-
 public class Vehicle {
     private int fuel;
     private String topSpeed;
@@ -20,6 +19,6 @@ public class Vehicle {
     }
 
     public void showInfo() {
-        System.out.println("Fuel is " + this.fuel + " litre and Top Speed is " + this.topSpeed + " m/s.");
+        System.out.printf("Fuel is %d litre and Top Speed is %s m/s.%n", this.fuel, this.topSpeed);
     }
 }

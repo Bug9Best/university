@@ -1,4 +1,3 @@
-
 public class FootballPlayer extends Player {
     private int playerNumber;
     private String position;

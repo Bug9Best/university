@@ -1,6 +1,4 @@
-
 public class Account {
-
     protected double balance;
     protected String name;
 
@@ -11,7 +9,7 @@ public class Account {
 
     public void deposit(double a) {
         if (getBalance() > 0) {
-            System.out.println(a + " baht is deposited to " + this.name + ".");
+            System.out.printf("%.2f baht is deposited to %s.%n", a, this.getName());
             this.setBalance(getBalance() + a);
         } else {
             System.out.println("Input number must be a positive integer.");
@@ -20,7 +18,7 @@ public class Account {
 
     public void withdraw(double a) {
         if (getBalance() > 0) {
-            System.out.println(a + " baht is withdrawn to " + this.name + ".");
+            System.out.printf("%.2f baht is withdrawn to %s.%n", a, this.getName());
             this.setBalance(getBalance() - a);
         } else {
             if (a < 0) {
@@ -48,7 +46,6 @@ public class Account {
     }
 
     public void showAccount() {
-        System.out.println(this.getName() + " account has " + this.getBalance() + " baht.");
+        System.out.printf("%s account has %.2f baht.%n", this.getName(), this.getBalance());
     }
-
 }

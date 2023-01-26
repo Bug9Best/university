@@ -1,7 +1,6 @@
-
 public class Plane extends Vehicle {
     public void showPlaneInfo() {
-        System.out.println("Plane detail is, Fuel is " + this.getFuel() + " litre and Top Speed is " + this.getTopSpeed() + " m/s.");
+        System.out.printf("Plane detail is, Fuel is %d litre and Top Speed is %s m/s.%n", this.getFuel(), this.getTopSpeed());
     }
 
     public void setPlaneInfo(int s, String t) {

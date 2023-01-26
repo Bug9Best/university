@@ -10,7 +10,7 @@ public class Account {
 
     public void deposit(double a) {
         if (a > 0) {
-            System.out.println(a + " baht is deposited to " + this.name + ".");
+            System.out.printf("%.2f baht is deposited to %s.%n", a, this.name);
             this.setBalance(getBalance() + a);
         } else {
             System.out.println("Input number must be a positive integer.");
@@ -21,7 +21,7 @@ public class Account {
         if (a > 0) {
             if(getBalance() - a > 0){
                 this.setBalance(getBalance() - a);
-                System.out.println(a + " baht is withdrawn to " + this.name + ".");
+                System.out.printf("%.2f baht is withdrawn from %s.%n", a, this.name);
             }else{
                 System.out.println("Not enough money!");
             }
@@ -47,7 +47,7 @@ public class Account {
     }
 
     public void showAccount() {
-        System.out.println(this.getName() + " account has " + this.getBalance() + " baht.");
+        System.out.printf("%s account has %.2f baht.%n", this.getName(), this.getBalance());
     }
 
 }
