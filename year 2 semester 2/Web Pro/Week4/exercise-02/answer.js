@@ -16,10 +16,6 @@ function start() {
     let process = document.getElementById('process')
     let end = document.getElementById('end');
 
-    start.innerHTML = '';
-    end.innerHTML = '';
-    process.innerHTML = '';
-
     start.innerHTML = 'Program started'
     setTimeout(() => {
         process.innerHTML = 'Hello World'
@@ -35,21 +31,25 @@ function stopTime() {
     var minutes = document.getElementById('setMinute');
     var seconds = document.getElementById('setSecond');
     var times = document.getElementById('Time').value
+    let flag = true
 
-    let result =  setInterval(() => {
-        let min = Math.floor(times / 60);
-        let sec = times % 60;
+    if (flag) {
+        let result = setInterval(() => {
+            let min = Math.floor(times / 60);
+            let sec = times % 60;
 
-        (sec < 10) ? sec = '0' + sec : sec;
-        (min < 10) ? min = '0' + min : min;
+            (sec < 10) ? sec = '0' + sec : sec;
+            (min < 10) ? min = '0' + min : min;
 
-        minutes.innerHTML = min;
-        seconds.innerHTML = sec;
+            minutes.innerHTML = min;
+            seconds.innerHTML = sec;
 
-        if (times > 0) {
-            times--;
-        } else {
-            clearInterval(result);
-        }
-    }, 100);
+            if (times > 0) {
+                times--;
+            } else {
+                clearInterval(result);
+            }
+        }, 100);
+        flag = false
+    }
 }
