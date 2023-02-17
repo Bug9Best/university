@@ -92,8 +92,8 @@
         <!-- ข้อ 3 ----------------------------------------------------------------- -->
         <div id='ex3'>
             <a v-if="number_runner == 0" class="button is-info">Zero Number</a>
-            <a v-else-if="number_runner % 2 == 1" class="button is-danger">Odd Number</a>
-            <a v-else-if="number_runner % 2 == 0" class="button is-success">Even Number</a>
+            <a v-if="number_runner % 2 == 1" class="button is-danger">Odd Number</a>
+            <a v-if="number_runner % 2 == 0" class="button is-success">Even Number</a>
         </div>
 
         <hr>
@@ -127,7 +127,7 @@
         <!-- ข้อ 5 ----------------------------------------------------------------- -->
         <div id='ex5'>
             <a @click="counter -=1 " class=button>-</a>
-            <a class="is-size-4 mx-5">{{counter}}</a>
+            <a @click="counter = 0" class="is-size-4 mx-5">{{counter}}</a>
             <a @click="counter +=1 " class=button>+</a>
         </div>
 
